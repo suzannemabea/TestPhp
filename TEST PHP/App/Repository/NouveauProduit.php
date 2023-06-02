@@ -1,4 +1,7 @@
 <?php
+//require_once ("../App/Entity/Produit.php");
+
+namespace App\Repository;
 /**
  * @author Florain  <franck@yahoo.com>
  * 
@@ -7,7 +10,6 @@
  * 
  */
 
-namespace App\Repository;
 
 use App\Entity\Produit;
 
@@ -17,15 +19,17 @@ use App\Entity\Produit;
  */
 class NouveauProduit
 {
-  public function creerProduit($nom, $prix)
-      /*Sachant que le constructeur de la méthode Produit prend 3 valeurs en paramètre, il serait
-      judicieux de rajouter une variable type à la méthode creerProduit, sinon tous les nouveaux produits auront
-      le meme type : 2
+  public function creerProduit($nom, $prix){
 
-       */
-	{
+
 		//return new Produit($nom, 2, $nom);
 		return new Produit($nom, 2, $prix);
+
+      /*Sachant que le constructeur de la méthode Produit prend 3 valeurs en paramètre, il serait
+    judicieux de rajouter une variable type à la méthode creerProduit, sinon tous les nouveaux produits auront
+    le meme type : 2
+
+     */
 	}
     /*
      * Dans cette class, nous avons une nouvelle fonction qui crée un nouveau produit en prenom en entrée
